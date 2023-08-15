@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<package name="default" extends="struts-default">
+<action name="LoginAction" class="mypack.LoginAction" method="LoginData">
+			<result name="admin">/adminhome.jsp</result>
+			<result name="user">/userhome.jsp</result>
+			<result name="loginfail">/home.jsp</result>
+			
+</action>
+<action name="RegisterAction" class="mypack.LoginAction" method="RegisterData">
+			<result name="registersuccess">/newuser.jsp</result>
+</action>
+   <action name="UserManagement" class="mypack.LoginAction" method="UserMgt">
+   					<result name="viewuser">/viewuser.jsp</result>
+   </action>
+   <action name="SelectUser" class="mypack.LoginAction" method="selectUser">
+   				<result name="displayuser">/displayuser.jsp</result>
+   </action>
+   <action name="approvedUser" class="mypack.LoginAction" method="Approved">
+   				<result name="viewuser">/viewuser.jsp</result>
+   </action>
+   <action name="RejectUser" class="mypack.LoginAction" method="Reject">
+   				<result name="viewuser">/viewuser.jsp</result>
+   </action>
+   <action name="viewaccount" class="mypack.LoginAction" method="viewAccount">
+   				<result name="view">/viewownaccount.jsp</result>
+   </action>
+   <action name="UpdateAction" class="mypack.LoginAction" method="UpdateAction">
+   				<result name="update">/viewownaccount.jsp</result>
+   </action>
+</package>
+
+</struts>    
